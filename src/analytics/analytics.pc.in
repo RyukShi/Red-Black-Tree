@@ -1,0 +1,14 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+bindir=${prefix}/bin/@CMAKE_BUILD_TYPE@
+staticlibdir=${prefix}/lib/@CMAKE_BUILD_TYPE@
+sharedlibdir=${prefix}/lib/@CMAKE_BUILD_TYPE@
+includedir=${prefix}/include
+
+Version: @PROJECT_VERSION@
+
+Name: analytics
+Description: Analytics library
+
+Requires:
+Libs: -L${bindir} -L${staticlibdir} -L${sharedlibdir} -lanalytics
+Cflags: -I${includedir}

@@ -1,0 +1,9 @@
+# see https://cmake.org/cmake/help/latest/module/CMakePackageConfigHelpers.html
+
+@PACKAGE_INIT@
+
+set_and_check(ANALYTICS_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
+set_and_check(ANALYTICS_LIB_DIRS "${PACKAGE_PREFIX_DIR}/lib/${CMAKE_BUILD_TYPE}")
+set(ANALYTICS_LIBRARIES analytics)
+
+check_required_components(Analytics)
