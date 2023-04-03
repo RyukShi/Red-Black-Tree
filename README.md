@@ -4,17 +4,36 @@ Implémentation d'un arbre AVL en langage C
 
 ## BUILD (Debug mode)
 
-1 - `mkdir debug tmp && cd debug && mkdir analytics avltree rbtree`  
-2 - `cd analytics/ && cmake ../../src/analytics -DCMAKE_INSTALL_PREFIX=../../tmp -DCMAKE_BUILD_TYPE=Debug && make && make install`  
-3 - `cd ../avltree && cmake ../../src/avltree -DCMAKE_INSTALL_PREFIX=../../tmp -DCMAKE_BUILD_TYPE=Debug && make && make install`  
-4 - `cd ../rbtree && cmake ../../src/rbtree -DCMAKE_INSTALL_PREFIX=../../tmp -DCMAKE_BUILD_TYPE=Debug && make && make install`  
+### 1 - Create directories
+```sh
+mkdir debug tmp && cd debug && mkdir analytics avltree rbtree
+```
+### 2 - Compilation
+```sh
+cd analytics/ && cmake ../../src/analytics -DCMAKE_INSTALL_PREFIX=../../tmp -DCMAKE_BUILD_TYPE=Debug && make && make install
+```
+```sh
+cd ../avltree && cmake ../../src/avltree -DCMAKE_INSTALL_PREFIX=../../tmp -DCMAKE_BUILD_TYPE=Debug && make && make install
+```
+```sh
+cd ../rbtree && cmake ../../src/rbtree -DCMAKE_INSTALL_PREFIX=../../tmp -DCMAKE_BUILD_TYPE=Debug && make && make install
+```
 
-## TESTS
+## UNIT TESTS
 
-execute ` make test` to execute unit tests and valgrind tests  
+Execute the command below to execute unit tests and valgrind tests
+```sh
+make test
+```
 
 ## ANALYTICS
 
-Execution time for red black tree : execute `./red-black-tree-analytics`  
+Execution time for red black tree execute this command
+```sh
+./red-black-tree-analytics
+```
 
-Execution time for avl tree : execute `./avl-tree-analytics`  
+Execution time for avl tree execute this command
+```sh
+./avl-tree-analytics
+```
